@@ -1,0 +1,14 @@
+{
+  "address": "0.0.0.0",
+  "port": 8000,
+  "secret": "!!! CHANGE THIS !!!",
+  "log_file": "pasteme.log",
+  "database": {
+    "type": "mysql",
+    "username": "username",
+    "password": "password",
+    "server": "pasteme-mysql",
+    "port": 3306,
+    "database": "pasteme"
+  }
+}

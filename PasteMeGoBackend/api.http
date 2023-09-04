@@ -1,0 +1,67 @@
+### Beat
+GET {{host}}/api/v3/?method=beat
+Accept: application/json
+
+### Greate permanent paste
+POST {{host}}/api/v3/paste
+Content-Type: application/json
+Accept: application/json
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjkxMzY2MjksIm9yaWdfaWF0IjoxNjI5MTMzMDI5LCJ1c2VybmFtZSI6InRlc3QifQ.oHwU1mReJGiC8UCffaka0eL6JBRmLRe5FR_ksLAxxwk
+
+{
+  "lang": "python",
+  "content": "print('Hello World!')"
+}
+
+### Greate self destruct paste
+POST {{host}}/api/v3/paste/
+Content-Type: application/json
+Accept: application/json
+
+{
+  "lang": "python",
+  "content": "print('Hello World!')",
+  "self_destruct": true,
+  "expire_count": 1,
+  "expire_second": 1
+}
+
+### Get paste
+GET {{host}}/api/v3/nobody/100
+Accept: application/json
+
+### Get paste
+GET {{host}}/api/v3/nobody/100
+Accept: text/plain
+
+### Get paste
+GET {{host}}/api/v3/lucienshui/100
+Accept: application/json
+
+### Login
+POST {{host}}/api/v3/session
+Content-Type: application/json
+
+{
+  "username": "test",
+  "password": "test"
+}
+
+### Logout
+DELETE {{host}}/api/v3/session
+Content-Type: application/json
+Cookie: PasteMe eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjgwOTY4MjYsIm9yaWdfaWF0IjoxNjI4MDkzMjI2LCJ1c2VybmFtZSI6ImFkbWluIn0.n_MJX6JmA5m8oDel5pWtZwlNgsTukoKtRHgNyCqrxkg
+
+### Refresh token
+GET {{host}}/api/v3/session
+#Content-Type: application/json
+#Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjgwOTY4MjYsIm9yaWdfaWF0IjoxNjI4MDkzMjI2LCJ1c2VybmFtZSI6ImFkbWluIn0.n_MJX6JmA5m8oDel5pWtZwlNgsTukoKtRHgNyCqrxkg
+#Authorization: PasteMe eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjgwOTY4MjYsIm9yaWdfaWF0IjoxNjI4MDkzMjI2LCJ1c2VybmFtZSI6ImFkbWluIn0.n_MJX6JmA5m8oDel5pWtZwlNgsTukoKtRHgNyCqrxkg
+
+//{
+//  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjgwOTY5NDgsIm9yaWdfaWF0IjoxNjI4MDkzMzQ4LCJ1c2VybmFtZSI6ImFkbWluIn0.AxtZhWiSBrxPeR4ZQWgyjU6AwxlJs8DJ9PREOGiqm5c"
+//}
+
+### Get temporary
+GET {{host}}/api/v3/paste/gxm08pex
+

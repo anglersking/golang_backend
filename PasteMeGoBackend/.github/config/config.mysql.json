@@ -1,0 +1,13 @@
+{
+  "address": "0.0.0.0",
+  "admin_url": "",
+  "port": 8000,
+  "database": {
+    "type": "mysql",
+    "username": "username",
+    "password": "password",
+    "server": "localhost",
+    "port": 4399,
+    "database": "pasteme"
+  }
+}
